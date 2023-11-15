@@ -1,235 +1,237 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/bootstrap-5.2.3-dist/css/bootstrap.css">
     <script src="./assets/bootstrap-5.2.3-dist/js/bootstrap.js"></script>
     <!-- Ward -->
-    <link rel="stylesheet" href="./style-pris.css">
+    <link rel="stylesheet" href="./Priscila-style.css">
     <title>Descripción General del Proyecto</title>
 </head>
 <style>
     /* Reset some default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Apply a modern font */
-body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #c4f4be, #9adaf5, #c075be);
-    background-size: 100% 100%;
-    animation: gradientAnimation 10s infinite;
-}
-
-@keyframes gradientAnimation {
-    0% {
-        background-position: 0% 50%;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
 
-    50% {
-        background-position: 100% 50%;
+    /* Apply a modern font */
+    body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #c4f4be, #9adaf5, #c075be);
+        background-size: 100% 100%;
+        animation: gradientAnimation 10s infinite;
     }
 
-    100% {
-        background-position: 0% 50%;
+    @keyframes gradientAnimation {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
     }
-}
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-}
-
-nav li {
-    margin: 0 10px;
-    /* Reduced margin for smaller screens */
-}
-
-nav a {
-    text-decoration: none;
-    color: #fff;
-}
-
-/* Main content styles */
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-}
-
-/* Responsive adjustments for larger screens */
-@media screen and (min-width: 768px) {
-
-    /* Increase header and nav font sizes and spacing */
     header {
-        padding: 20px 0;
+        background-color: #333;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+
+    nav li {
+        margin: 0 10px;
+        /* Reduced margin for smaller screens */
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    /* Main content styles */
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* Responsive adjustments for larger screens */
+    @media screen and (min-width: 768px) {
+
+        /* Increase header and nav font sizes and spacing */
+        header {
+            padding: 20px 0;
+            font-size: 24px;
+        }
+
+        nav li {
+            margin: 0 20px;
+        }
+
+        /* Adjust main content padding */
+        main {
+            padding: 40px;
+        }
+    }
+
+    /* Responsive adjustments for even larger screens */
+    @media screen and (min-width: 1024px) {
+
+        /* Further increase header and nav font sizes and spacing */
+        header {
+            padding: 30px 0;
+            font-size: 32px;
+        }
+
+        nav li {
+            margin: 0 30px;
+        }
+
+        /* Further adjust main content padding */
+        main {
+            padding: 60px;
+        }
+    }
+
+    /* Main content styles */
+    main {
+        flex-grow: 1;
+        /* Ocupa el espacio restante */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* Hero section styles */
+    .introduccion {
+        background-image: url('hero-image.jpg');
+        background-size: cover;
+        width: 100%;
+        padding: 100px 0;
+        color: #0a0a0a;
+    }
+
+    .introduccion h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+        background-color: #555;
+    }
+
+    /* Cards section styles */
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 40px 0;
+    }
+
+    .card {
+        background-color: rgba(255, 255, 255, 0.8);
+        /* Fondo con efecto glass */
+        backdrop-filter: blur(10px);
+        /* Efecto de vidrio */
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        /* Borde */
+        border-radius: 8px;
+        margin: 20px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        /* Sombra */
+        transition: transform 0.3s ease-in-out;
+        /* Efecto de transformación al pasar el ratón */
+    }
+
+    .card img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .card h2 {
         font-size: 24px;
+        margin: 10px 0;
     }
 
-    nav li {
-        margin: 0 20px;
+    .card p {
+        font-size: 16px;
+        margin: 10px 0;
     }
 
-    /* Adjust main content padding */
-    main {
-        padding: 40px;
-    }
-}
-
-/* Responsive adjustments for even larger screens */
-@media screen and (min-width: 1024px) {
-
-    /* Further increase header and nav font sizes and spacing */
-    header {
-        padding: 30px 0;
-        font-size: 32px;
+    .card:hover {
+        transform: scale(1.05);
+        /* Efecto de escala al pasar el ratón */
     }
 
-    nav li {
-        margin: 0 30px;
-    }
 
-    /* Further adjust main content padding */
-    main {
-        padding: 60px;
-    }
-}
-
-/* Main content styles */
-main {
-    flex-grow: 1;
-    /* Ocupa el espacio restante */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-}
-
-/* Hero section styles */
-.introduccion {
-    background-image: url('hero-image.jpg');
-    background-size: cover;
-    width: 100%;
-    padding: 100px 0;
-    color: #0a0a0a;
-}
-
-.introduccion h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #555;
-}
-
-/* Cards section styles */
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 40px 0;
-}
-
-.card {
-    background-color: rgba(255, 255, 255, 0.8);
-    /* Fondo con efecto glass */
-    backdrop-filter: blur(10px);
-    /* Efecto de vidrio */
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    /* Borde */
-    border-radius: 8px;
-    margin: 20px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    /* Sombra */
-    transition: transform 0.3s ease-in-out;
-    /* Efecto de transformación al pasar el ratón */
-}
-
-.card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.card h2 {
-    font-size: 24px;
-    margin: 10px 0;
-}
-
-.card p {
-    font-size: 16px;
-    margin: 10px 0;
-}
-
-.card:hover {
-    transform: scale(1.05);
-    /* Efecto de escala al pasar el ratón */
-}
-
-
-/* Footer styles */
-/* Footer styles */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
-}
-
-/* Responsive footer styles for screens smaller than 768px */
-@media screen and (max-width: 768px) {
+    /* Footer styles */
+    /* Footer styles */
     footer {
-        padding: 10px;
+        text-align: center;
+        padding: 20px;
+        background-color: #333;
+        color: #fff;
     }
-}
 
-/* Additional responsive styles for screens smaller than 480px */
-@media screen and (max-width: 480px) {
-    footer {
-        font-size: 14px;
+    /* Responsive footer styles for screens smaller than 768px */
+    @media screen and (max-width: 768px) {
+        footer {
+            padding: 10px;
+        }
     }
-}
+
+    /* Additional responsive styles for screens smaller than 480px */
+    @media screen and (max-width: 480px) {
+        footer {
+            font-size: 14px;
+        }
+    }
 
 
-.h1,
-.introduccion {
-    font-size: 1.1em;
-    color: rgb(80, 80, 81);
-}
+    .h1,
+    .introduccion {
+        font-size: 1.1em;
+        color: rgb(80, 80, 81);
+    }
 </style>
+
 <body>
     <header id="header">
         <nav>
@@ -240,39 +242,82 @@ footer {
                 <li><a href="Priscila-alcance-del-proyecto.html">Alcance</a></li>
             </ul>
         </nav>
-        <div id="banner" class="banner overflow-hidden" style="background-image: url('./assets/images/banner-pujol.jpg');">
+        <div id="banner" class="banner overflow-hidden"
+            style="background-image: url('./assets/images/banner-pujol.jpg');">
         </div>
     </header>
     <main class="container">
-        <div id="titulo">
-            <h1>Descripción General del Proyecto</h1>
-            <p class="parrafo">Como mencionamos anteriormente, la empresa Pujol S.R.L, es una empresa con un gran renombre en la provincia de compra-venta mercaderías al por mayor, rubro en el que presta sus servicios a la comunidad hace 50 años, con un total de tres empleados: dos de planta, un empleado administrativo que es el técnico contable y dos socios: el gerente y dueño, Carlos Pujol y segundo socio que vendría a ser el hijo. </p>
-            <p class="parrafo"> Cuenta con áreas funcionales a ser: Ventas, Finanzas y contabilidad, entre otros, los cuales, sus principales procesos de negocios a los que propondremos diversas soluciones alternativas, son la venta de mercadería, ensamble de productos, identificación de clientes, pago a acreedores, administración de cuentas en efectivo, verificación de calidad, compra de productos a proveedores y recepción de los mismos, almacenaje de los bienes, control de stock y otras actividades de contabilidad. 
-            </p>
-            <p>Debido a la cantidad de problemas encontrados en la empresa, y el poco tiempo que contamos respecto a la implementación de este proyecto en particular, las soluciones que creemos pertinente para satisfacer esta demanda se realizará en cuatro etapas:</p>
-        </div>
-        <div class="parrafo px-3">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"><p> 1era Etapa: Informatizar las operaciones más importantes e inmediatas, lo que mejorarían la eficiencia y productividad de las áreas de gestión más arriba mencionadas </p></li>
-                <li class="list-group-item"><p> 2da Etapa: Mejorar los puntos de venta de la organización, como ser ventas online y  la integración con sistemas de pago electrónicos, como terminales de tarjetas de crédito o aplicaciones de pagos móviles, para facilitar transacciones sin efectivo (ya fuera del alcance de este tp). </p></li>
-                <li class="list-group-item"><p> 3da Etapa: Mejorar la eficiencia operativa al cambiar el layout de mercaderías en el depósito identificando las áreas problemáticas, cuellos de botella y oportunidades de mejora, optimizando así los flujos de trabajo logrando la reducción de movimientos necesarios. Dividir el depósito en zonas específicas según la naturaleza de los productos o las etapas del proceso; asegurarse de que el nuevo layout promueva la ergonomía y facilite la comodidad y seguridad de los trabajadores; etiquetar y señalizar claramente las diferentes áreas, estantes y productos para facilitar la navegación y reducir el tiempo de búsqueda. (ya fuera del alcance de este tp).  </p></li>
-                <li class="list-group-item"><p> 4ta Etapa: Realizar las reparaciones de la parte edilicia como instalaciones eléctricas y sanitarias; logrando de esta manera una mejor distribución del espacio, maximizando la capacidad de almacenamiento y facilitando la organización de los productos, lo cual tendrá un impacto significativo en la eficiencia, seguridad y satisfacción general tanto del personal como de los clientes; priorizando a su vez la señalización y matafuegos en todo el depósito para cumplir con las normas legales vigentes en el país (ya fuera del alcance de este tp).   </p></li>
-            </ol>     
-        </div>
-        <div class="card">
-            <div class="parrafo-con-imagen card-body">
-                <div class="p-2 imagen card overflow-hidden">
-                    <img class="img-fluid" src="./assets/images/descripcion-general-edit.jpg" alt="">           
-                </div>
-                <div class="parrafo px-2">
-                    <p class="text-center fs-2">!</p>
-                    <p class="text-center">En este proyecto, solo cubriremos la primera etapa, el desarrollo e implementación de un sistema para informatizar las principales actidades de la empresa.</p> 
-                </div>
+        <section>
+            <div id="titulo">
+                <center>
+                    <h1>Descripción General del Proyecto</h1>
+                </center><br>
+                <p class="parrafo">Como mencionamos anteriormente, la empresa Pujol S.R.L, es una empresa con un gran
+                    renombre en la provincia de compra-venta mercaderías al por mayor, rubro en el que presta sus
+                    servicios a la comunidad hace 50 años, con un total de tres empleados: dos de planta, un empleado
+                    administrativo que es el técnico contable y dos socios: el gerente y dueño, Carlos Pujol y segundo
+                    socio que vendría a ser el hijo. </p>
+                <p class="parrafo"> Cuenta con áreas funcionales a ser: Ventas, Finanzas y contabilidad, entre otros,
+                    los cuales, sus principales procesos de negocios a los que propondremos diversas soluciones
+                    alternativas, son la venta de mercadería, ensamble de productos, identificación de clientes, pago a
+                    acreedores, administración de cuentas en efectivo, verificación de calidad, compra de productos a
+                    proveedores y recepción de los mismos, almacenaje de los bienes, control de stock y otras
+                    actividades de contabilidad.
+                </p>
+                <p>Debido a la cantidad de problemas encontrados en la empresa, y el poco tiempo que contamos respecto a
+                    la implementación de este proyecto en particular, las soluciones que creemos pertinente para
+                    satisfacer esta demanda se realizará en cuatro etapas:</p>
             </div>
+            <div class="parrafo px-3">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <p> <strong>Primer Etapa</strong>: Informatizar las operaciones más importantes e inmediatas, lo
+                            que mejorarían la
+                            eficiencia y productividad de las áreas de gestión más arriba mencionadas </p>
+                    </li>
+                    <li class="list-group-item">
+                        <p> <strong>Segunda Etapa</strong>: Mejorar los puntos de venta de la organización, como ser
+                            ventas online y la
+                            integración con sistemas de pago electrónicos, como terminales de tarjetas de crédito o
+                            aplicaciones de pagos móviles, para facilitar transacciones sin efectivo (ya fuera del
+                            alcance de este tp). </p>
+                    </li>
+                    <li class="list-group-item">
+                        <p> <strong>Tercer Etapa</strong>: Mejorar la eficiencia operativa al cambiar el layout de
+                            mercaderías en el
+                            depósito identificando las áreas problemáticas, cuellos de botella y oportunidades de
+                            mejora, optimizando así los flujos de trabajo logrando la reducción de movimientos
+                            necesarios. Dividir el depósito en zonas específicas según la naturaleza de los productos o
+                            las etapas del proceso; asegurarse de que el nuevo layout promueva la ergonomía y facilite
+                            la comodidad y seguridad de los trabajadores; etiquetar y señalizar claramente las
+                            diferentes áreas, estantes y productos para facilitar la navegación y reducir el tiempo de
+                            búsqueda. (ya fuera del alcance de este tp). </p>
+                    </li>
+                    <li class="list-group-item">
+                        <p> <strong>Cuarta Etapa</strong>: Realizar las reparaciones de la parte edilicia como
+                            instalaciones eléctricas y
+                            sanitarias; logrando de esta manera una mejor distribución del espacio, maximizando la
+                            capacidad de almacenamiento y facilitando la organización de los productos, lo cual tendrá
+                            un impacto significativo en la eficiencia, seguridad y satisfacción general tanto del
+                            personal como de los clientes; priorizando a su vez la señalización y matafuegos en todo el
+                            depósito para cumplir con las normas legales vigentes en el país (ya fuera del alcance de
+                            este tp). </p>
+                    </li>
+                    </ol>
+            </div>
+        </section>
+        
+        <div class="card">
+            <img class="img-fluid" src="assets-Priscila/images/descripcion-general-edit.jpg" alt="">
+            <p>En este proyecto, solo cubriremos la primera etapa, el desarrollo e
+            implementación de un sistema para informatizar las principales actidades de la empresa.</p>
         </div>
+    
     </main>
+    
     <footer id="footer">
         <p> Salinas Priscila - Comisión 3</p>
     </footer>
 </body>
+
 </html>

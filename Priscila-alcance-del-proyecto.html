@@ -1,235 +1,237 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/bootstrap-5.2.3-dist/css/bootstrap.css">
     <script src="./assets/bootstrap-5.2.3-dist/js/bootstrap.js"></script>
     <!-- Ward -->
-    <link rel="stylesheet" href="./style-pris.css">
+    <link rel="stylesheet" href="./Priscila-style.css">
     <title>Alcance del Proyecto</title>
 </head>
 <style>
     /* Reset some default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Apply a modern font */
-body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #c4f4be, #9adaf5, #c075be);
-    background-size: 100% 100%;
-    animation: gradientAnimation 10s infinite;
-}
-
-@keyframes gradientAnimation {
-    0% {
-        background-position: 0% 50%;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
 
-    50% {
-        background-position: 100% 50%;
+    /* Apply a modern font */
+    body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #c4f4be, #9adaf5, #c075be);
+        background-size: 100% 100%;
+        animation: gradientAnimation 10s infinite;
     }
 
-    100% {
-        background-position: 0% 50%;
+    @keyframes gradientAnimation {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
     }
-}
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-}
-
-nav li {
-    margin: 0 10px;
-    /* Reduced margin for smaller screens */
-}
-
-nav a {
-    text-decoration: none;
-    color: #fff;
-}
-
-/* Main content styles */
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-}
-
-/* Responsive adjustments for larger screens */
-@media screen and (min-width: 768px) {
-
-    /* Increase header and nav font sizes and spacing */
     header {
-        padding: 20px 0;
+        background-color: #333;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+
+    nav li {
+        margin: 0 10px;
+        /* Reduced margin for smaller screens */
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    /* Main content styles */
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* Responsive adjustments for larger screens */
+    @media screen and (min-width: 768px) {
+
+        /* Increase header and nav font sizes and spacing */
+        header {
+            padding: 20px 0;
+            font-size: 24px;
+        }
+
+        nav li {
+            margin: 0 20px;
+        }
+
+        /* Adjust main content padding */
+        main {
+            padding: 40px;
+        }
+    }
+
+    /* Responsive adjustments for even larger screens */
+    @media screen and (min-width: 1024px) {
+
+        /* Further increase header and nav font sizes and spacing */
+        header {
+            padding: 30px 0;
+            font-size: 32px;
+        }
+
+        nav li {
+            margin: 0 30px;
+        }
+
+        /* Further adjust main content padding */
+        main {
+            padding: 60px;
+        }
+    }
+
+    /* Main content styles */
+    main {
+        flex-grow: 1;
+        /* Ocupa el espacio restante */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* Hero section styles */
+    .introduccion {
+        background-image: url('hero-image.jpg');
+        background-size: cover;
+        width: 100%;
+        padding: 100px 0;
+        color: #0a0a0a;
+    }
+
+    .introduccion h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+        background-color: #555;
+    }
+
+    /* Cards section styles */
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 40px 0;
+    }
+
+    .card {
+        background-color: rgba(255, 255, 255, 0.8);
+        /* Fondo con efecto glass */
+        backdrop-filter: blur(10px);
+        /* Efecto de vidrio */
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        /* Borde */
+        border-radius: 8px;
+        margin: 20px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        /* Sombra */
+        transition: transform 0.3s ease-in-out;
+        /* Efecto de transformación al pasar el ratón */
+    }
+
+    .card img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .card h2 {
         font-size: 24px;
+        margin: 10px 0;
     }
 
-    nav li {
-        margin: 0 20px;
+    .card p {
+        font-size: 16px;
+        margin: 10px 0;
     }
 
-    /* Adjust main content padding */
-    main {
-        padding: 40px;
-    }
-}
-
-/* Responsive adjustments for even larger screens */
-@media screen and (min-width: 1024px) {
-
-    /* Further increase header and nav font sizes and spacing */
-    header {
-        padding: 30px 0;
-        font-size: 32px;
+    .card:hover {
+        transform: scale(1.05);
+        /* Efecto de escala al pasar el ratón */
     }
 
-    nav li {
-        margin: 0 30px;
-    }
 
-    /* Further adjust main content padding */
-    main {
-        padding: 60px;
-    }
-}
-
-/* Main content styles */
-main {
-    flex-grow: 1;
-    /* Ocupa el espacio restante */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-}
-
-/* Hero section styles */
-.introduccion {
-    background-image: url('hero-image.jpg');
-    background-size: cover;
-    width: 100%;
-    padding: 100px 0;
-    color: #0a0a0a;
-}
-
-.introduccion h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #555;
-}
-
-/* Cards section styles */
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 40px 0;
-}
-
-.card {
-    background-color: rgba(255, 255, 255, 0.8);
-    /* Fondo con efecto glass */
-    backdrop-filter: blur(10px);
-    /* Efecto de vidrio */
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    /* Borde */
-    border-radius: 8px;
-    margin: 20px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    /* Sombra */
-    transition: transform 0.3s ease-in-out;
-    /* Efecto de transformación al pasar el ratón */
-}
-
-.card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.card h2 {
-    font-size: 24px;
-    margin: 10px 0;
-}
-
-.card p {
-    font-size: 16px;
-    margin: 10px 0;
-}
-
-.card:hover {
-    transform: scale(1.05);
-    /* Efecto de escala al pasar el ratón */
-}
-
-
-/* Footer styles */
-/* Footer styles */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
-}
-
-/* Responsive footer styles for screens smaller than 768px */
-@media screen and (max-width: 768px) {
+    /* Footer styles */
+    /* Footer styles */
     footer {
-        padding: 10px;
+        text-align: center;
+        padding: 20px;
+        background-color: #333;
+        color: #fff;
     }
-}
 
-/* Additional responsive styles for screens smaller than 480px */
-@media screen and (max-width: 480px) {
-    footer {
-        font-size: 14px;
+    /* Responsive footer styles for screens smaller than 768px */
+    @media screen and (max-width: 768px) {
+        footer {
+            padding: 10px;
+        }
     }
-}
+
+    /* Additional responsive styles for screens smaller than 480px */
+    @media screen and (max-width: 480px) {
+        footer {
+            font-size: 14px;
+        }
+    }
 
 
-.h1,
-.introduccion {
-    font-size: 1.1em;
-    color: rgb(80, 80, 81);
-}
+    .h1,
+    .introduccion {
+        font-size: 1.1em;
+        color: rgb(80, 80, 81);
+    }
 </style>
+
 <body>
     <header id="header">
         <nav>
@@ -240,46 +242,69 @@ footer {
                 <li><a href="Priscila-alcance-del-proyecto.html">Alcance</a></li>
             </ul>
         </nav>
-        <div id="banner" class="banner overflow-hidden" style="background-image: url('./assets/images/banner-alcance-proyecto-edit.jpg');">
+        <div id="banner" class="banner overflow-hidden"
+            style="background-image: url('./assets/images/banner-alcance-proyecto-edit.jpg');">
         </div>
     </header>
     <main class="container">
-        <div id="titulo">
-            <h1>Alcance del Proyecto</h1>
-            <p class="parrafo">Debido a la cantidad de problemas encontrados en la empresa, y el poco tiempo que contamos respecto a la implementación de este proyecto en particular,como alcance del proyecto, apostamos a lo siguiente:</p>
-        </div>
-        <div class="parrafo px-3">
-            <ol class="list-group list-group-numbered">
-                <li class="list-group-item"><p class="d-inline">Proponer la utilización de un sistema informático para sustituir las registraciones manuales, tanto de proveedores, mercaderías, pedidos de clientes, pedidos a proveedores, compras a proveedores, tanto altas, bajas como modificaciones; de esta manera, como documentos de respaldo, solo utilizar informes impresos pertinentes para la gerencia de la organización.</p>
-                </li>
-                <li class="list-group-item">
-                    <p class="d-inline"> Mejorar la gestión por medio de un sistema informático la Gestión de compras, la gestión de proveedores, la gestión de ventas, la gestión al cliente y la gestión almacén.</p>
-                </li>
-                <li class="list-group-item">
-                    <p class="d-inline">Capacitar a los socios gerentes y todo el personal sobre los sistemas de información computarizados a implementarse y los procesos mejorados para que todos comprendan los cambios implementados y sepan cómo trabajar de manera eficiente dentro del nuevo sistema.</p>
-                </li>
-                <li class="list-group-item">
-                    <p class="d-inline"> El software propuesto debería garantizar la seguridad de los datos del local y de los clientes, implementando medidas de seguridad como encriptación, acceso restringido y copias de seguridad regulares.</p>
-                </li>
-                <li class="list-group-item">
-                    <p class="d-inline"> El software  a implementar podría permitir personalizar elementos como logotipos, colores o diseños, adaptándose a la imagen de la empresa. Además, debería ser escalable para futuras expansiones del negocio, como la apertura de sucursales adicionales.</p>
-                </li>
-            </ol>     
-        </div>
-        <div class="card">
-            <div class="parrafo-con-imagen card-body">
-                <div class="parrafo px-2">
-                    <p class="text-center fs-2">!</p>
-                    <p class="text-center">Es importante destacar que el alcance del proyecto de software puede evolucionar a lo largo del tiempo debido a cambios en los requisitos prioridades o circunstancias que ocurran durante el desarrollo.</p> 
-                </div>
-                <div class="p-2 imagen card overflow-hidden">
-                    <img class="img-fluid" src="./assets/images/alcance-de-proyecto-2-edit.jpg" alt="">           
-                </div>
+        <section>
+            <div id="titulo">
+                <center>
+                    <h1>Alcance del Proyecto</h1>
+                </center><br>
+                <p class="parrafo">Debido a la cantidad de problemas encontrados en la empresa, y el poco tiempo que
+                    contamos respecto a la implementación de este proyecto en particular,como alcance del proyecto,
+                    apostamos a lo siguiente:</p>
             </div>
+            <div class="parrafo px-3">
+                <ol class="list-group list-group-numbered">
+                    <li class="list-group-item">
+                        <p class="d-inline">Proponer la utilización de un sistema informático para sustituir las
+                            registraciones manuales, tanto de proveedores, mercaderías, pedidos de clientes, pedidos a
+                            proveedores, compras a proveedores, tanto altas, bajas como modificaciones; de esta manera,
+                            como
+                            documentos de respaldo, solo utilizar informes impresos pertinentes para la gerencia de la
+                            organización.</p>
+                    </li>
+                    <li class="list-group-item">
+                        <p class="d-inline"> Mejorar la gestión por medio de un sistema informático la Gestión de
+                            compras,
+                            la gestión de proveedores, la gestión de ventas, la gestión al cliente y la gestión almacén.
+                        </p>
+                    </li>
+                    <li class="list-group-item">
+                        <p class="d-inline">Capacitar a los socios gerentes y todo el personal sobre los sistemas de
+                            información computarizados a implementarse y los procesos mejorados para que todos
+                            comprendan
+                            los cambios implementados y sepan cómo trabajar de manera eficiente dentro del nuevo
+                            sistema.
+                        </p>
+                    </li>
+                    <li class="list-group-item">
+                        <p class="d-inline"> El software propuesto debería garantizar la seguridad de los datos del
+                            local y
+                            de los clientes, implementando medidas de seguridad como encriptación, acceso restringido y
+                            copias de seguridad regulares.</p>
+                    </li>
+                    <li class="list-group-item">
+                        <p class="d-inline"> El software a implementar podría permitir personalizar elementos como
+                            logotipos, colores o diseños, adaptándose a la imagen de la empresa. Además, debería ser
+                            escalable para futuras expansiones del negocio, como la apertura de sucursales adicionales.
+                        </p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+        <div class="card">
+            <img class="img-fluid" src="assets-Priscila/images/alcance-de-proyecto-2-edit.jpg" alt="">
+            <p>Es importante destacar que el alcance del proyecto de software puede
+                evolucionar a lo largo del tiempo debido a cambios en los requisitos prioridades o
+                circunstancias que ocurran durante el desarrollo.</p>
         </div>
     </main>
     <footer id="footer">
         <p> Salinas Priscila - Comisión 3</p>
     </footer>
 </body>
+
 </html>
