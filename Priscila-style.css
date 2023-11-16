@@ -231,7 +231,7 @@ footer {
     color: whitesmoke;
 }
 /* Responsive footer styles for screens smaller than 768px */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
     .card {
         max-width: 50%;
         margin-top: 5px;
@@ -240,6 +240,9 @@ footer {
 }
 /* Responsive footer styles for screens smaller than 768px */
 @media screen and (max-width: 768px) {
+    .card {
+        max-width: 70%;
+    }
     footer {
         padding: 10px;
         color: whitesmoke;
